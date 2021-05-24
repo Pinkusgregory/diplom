@@ -1,0 +1,40 @@
+
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+
+GET     /                              @controllers.MainController.index
+GET     /contacts                      @controllers.MainController.contacts
+GET     /about                         @controllers.MainController.about
+
+GET     /signIn                        @controllers.AuthController.signIn
+GET     /signUp                        @controllers.AuthController.signUp
+POST    /signUp                        @controllers.AuthController.signUpSubmit
+
+#GET     /api/listArticle               controllers.MainController.listArticle
+
+#GET     /api/loadFromJson              controllers.MainController.loadFromJson
+
+#GET     /api/article/get/:id           controllers.ArticleController.get(id: String)
+
+#GET     /api/article/delete/:id        controllers.ArticleController.delete(id: String)
+
+#POST     /api/article/create/:id       controllers.ArticleController.create(id: String)
+
+#GET     /api/article/update/:id/:upperChapterId         controllers.ArticleController.update(id: String, upperChapterId: String)
+
+#GET     /api/chapter/get/:id           controllers.ChapterController.get(id: String)
+
+#GET     /api/chapter/delete/:id        controllers.ChapterController.delete(id: String)
+
+#POST     /api/chapter/create/:id       controllers.ChapterController.create(id: String)
+
+#GET     /api/chapter/update/:id/:upperChapterId        controllers.ChapterController.update(id: String, upperChapterId: String)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+      

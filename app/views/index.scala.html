@@ -1,0 +1,106 @@
+@()(implicit request: RequestHeader)
+
+@application("Главная"){
+    <div class="mainTheme__content">
+        <div class="mainTheme__overlay">
+            <div class="container">
+                <div class="mainTheme">
+                    <div class="mainTheme__body">
+                        <div class="mainTheme__title">Система контроля и учета рабочего времени сотрудников компании</div>
+                        <span class="mainTheme__subTittle">Удобная система учета времени для Вас и Ваших работников</span>
+                        <div class="mainTheme__buttons">
+                            <a href="" target="_blank"><button class="mainTheme__button">Войти</button></a>
+                            <a href="" target="_blank"><button
+                            class="mainTheme__button">Зарегистрироваться</button></a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="aboutUs" id="aboutUs">
+        <div class="container">
+            <div class="aboutUs__row">
+                <div class="aboutUs__tittle">About Us</div>
+                <div class="aboutUs__subtittle">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                </div>
+            </div>
+            <div class="aboutUs__row">
+                <div class="aboutUs__columns">
+                    <div class="aboutUs__column">
+                        <div class="aboutsUs__column_img"><img src="../../public/images/aboutUs/worldsAbout.png" alt="" class=""></div>
+                        <div class="aboutUs__column_title">Awesome Icons</div>
+                        <div class="aboutsUs__column_text">Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit, sed do eiusmod tempor</div>
+                    </div>
+                    <div class="aboutUs__column">
+                        <div class="aboutsUs__column_img"><img src="../../public/images/aboutUs/transerAbout.png" alt="" class=""></div>
+                        <div class="aboutUs__column_title">One Page</div>
+                        <div class="aboutsUs__column_text">Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit, sed do eiusmod tempor</div>
+                    </div>
+                    <div class="aboutUs__column">
+                        <div class="aboutsUs__column_img"><img src="../../public/images/aboutUs/headAbout.png" alt="" class="">
+                        </div>
+                        <div class="aboutUs__column_title">Fully Responsive</div>
+                        <div class="aboutsUs__column_text">Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit, sed do eiusmod tempor</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contacts" id="contacts">
+        <div class="container">
+            <div class="contacts__row">
+                <div class="contacts__tittle">Contact us</div>
+                <div class="contacts__subTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+            </div>
+            <div class="contacts__row">
+                <div class="contacts__columns">
+                    <div class="contacts__column">
+                        <div class="contacts__img"><img src="../../public/images/contats/placeholder.png" alt="" class=""></div>
+                        <div class="contacts__text">Nobinagar savar,Dhaka Bangladesh</div>
+                    </div>
+                    <div class="contacts__column">
+                        <div class="contacts__img"><img src="../../public/images/contats/phone.png" alt="" class=""></div>
+                        <div class="contacts__text">+8801743331996 +8801928737807</div>
+                    </div>
+                    <div class="contacts__column">
+                        <div class="contacts__img"><img src="../../public/images/contats/mail.png" alt="" class=""></div>
+                        <div class="contacts__text">@{"quicmasud@gmail.com qickmasud@yahoo.com"}</div>
+                    </div>
+                </div>
+                <div class="contacts__row">
+                    <form action="#" id="form" class="contacts__form">
+                        <div class="form__columns">
+                            <div class="form__item">
+
+                                <input id="formName" type="text" name="name" class="form__input _req" placeholder="your Name">
+                            </div>
+                            <div class="form__item">
+
+                                <input id="formEmail" type="text" name="email" class="form__input _req _email"
+                                placeholder="your E-mail">
+                            </div>
+                        </div>
+                        <div class="form__item">
+
+                            <textarea name="message" id="formMessage" class="form__textArea _req"
+                            placeholder="your Message"></textarea>
+                        </div>
+                        <div class="form__button">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}

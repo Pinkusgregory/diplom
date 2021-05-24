@@ -1,0 +1,20 @@
+@()(implicit request: RequestHeader)
+
+@formApplication("Вход в систему"){
+    <div class="form">
+        <form action="#" id="form" class="form__body">
+            <h1 class="form__title">Войти в систему</h1>
+
+            <div class="form__item">
+                <label for="formEmail" class="form__label">E-mail*:</label>
+                <input id="formEmail" type="text" name="email" class="form__input _req _email">
+            </div>
+            <div class="form__item">
+                <label for="formName" class="form__label">Пароль*:</label>
+                <input id="formName" type="text" name="name" class="form__input _req">
+            </div>
+            <button type="submit" class="form__button">Войти</button>
+            <a href="@routes.MainController.index()" class="form__button">Назад</a>
+        </form>
+    </div>
+}

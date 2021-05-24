@@ -1,0 +1,88 @@
+@import helper._
+@(title: String)(content: Html)(implicit request: RequestHeader)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta description="WebSite">
+        <link rel="icon" href="@routes.Assets.versioned("images/Main/favicon.ico")" type="image/x-icon">
+        <title>@title</title>
+        <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/style.css")">
+        <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/slider.css")">
+        <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/popups.css")">
+        <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/table.css")">
+        <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/bootstrap-grid.css")">
+        <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/bootstrap-reboot.css")">
+        <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/bootstrap.css")">
+        <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/bootstrap.min.css")">
+    </head>
+    <body>
+        <div class="wrapper">
+                <!-- Header begin -->
+            <header class="header">
+                <div class="container">
+                    <div class="header__body">
+                        <a href="#" class="header__logo">
+                            <img src="@routes.Assets.versioned("images/Main/logo_project.png")" alt="" class="">
+                        </a>
+                        <div class="header__burger"><span></span></div>
+                        <nav class="header__menu">
+                            <div style="text-align: center;">
+                                <ul class="header__list">
+                                    <li>
+                                        <a href="@routes.MainController.index()" class="header__link">Главная</a>
+                                    </li>
+                                    <li>
+                                        <a href="@routes.MainController.about()" class="header__link">О проекте</a>
+                                    </li>
+                                    <li>
+                                        <a href="@routes.MainController.contacts()" class="header__link">Контакты
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="header__list_reg">
+                                <li class="header__list">
+                                    <a href="@routes.AuthController.signIn()" class="header__link">Войти</a>
+                                </li>
+                                <li class="header__list">
+                                    <a href="@routes.AuthController.signUp()" class="header__link">Зарегистрироваться</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+                <!-- Header end -->
+                <!-- Content begin -->
+            <div class="content">
+                @content
+            </div>
+                <!-- Content end -->
+                <!-- Footer begin -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__content">All rights Reserved © 2021</div>
+                </div>
+            </footer>
+                <!-- Footer end -->
+
+                <!-- Scripts -->
+                <!-- Jquery -->
+            <script src="@routes.Assets.versioned("/javascripts/jquery.js")"></script>
+                <!-- Bootstrap -->
+            <script src="@routes.Assets.versioned("javascripts/bootstrap.bundle.js")"></script>
+            <script src="@routes.Assets.versioned("javascripts/bootstrap.js")"></script>
+                <!-- menuburger -->
+            <script src="@routes.Assets.versioned("javascripts/burger.js")"></script>
+                <!-- forms send -->
+            <script src="@routes.Assets.versioned("javascripts/form.js")"></script>
+                <!-- slider -->
+            <script src="@routes.Assets.versioned("javascripts/slick.min.js")"></script>
+            <script src="@routes.Assets.versioned("javascripts/script.js")"></script>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+@import helper._
+@(title: String)(content: Html)(implicit request: RequestHeader)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta description="WebSite">
+        <link rel="icon" href="@routes.Assets.versioned("images/Main/favicon.ico")" type="image/x-icon">
+        <title>@title</title>
+        <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/bootstrap-grid.css")">
+        <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/bootstrap-reboot.css")">
+        <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/bootstrap.css")">
+        <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/bootstrap.min.css")">
+        <link rel="stylesheet" href="@routes.Assets.versioned("FORM/css/select.css")">
+        <link rel="stylesheet" href="@routes.Assets.versioned("FORM/css/style.css")">
+    </head>
+    <body>
+        <div class="wrapper">
+                <!-- Content begin -->
+            <div class="content">
+                @content
+            </div>
+                <!-- Content end -->
+
+                <!-- Scripts -->
+                <!-- Jquery -->
+            <script src="@routes.Assets.versioned("/javascripts/jquery.js")"></script>
+                <!-- Bootstrap -->
+            <script src="@routes.Assets.versioned("javascripts/bootstrap.bundle.js")"></script>
+            <script src="@routes.Assets.versioned("javascripts/bootstrap.js")"></script>
+                <!-- menuburger -->
+            <script src="@routes.Assets.versioned("javascripts/burger.js")"></script>
+                <!-- forms send -->
+            <script src="@routes.Assets.versioned("javascripts/form.js")"></script>
+                <!-- slider -->
+            <script src="@routes.Assets.versioned("javascripts/slick.min.js")"></script>
+            <script src="@routes.Assets.versioned("javascripts/script.js")"></script>
+            <script src="@routes.Assets.versioned("FORM/js/select.js")"></script>
+            <script src="@routes.Assets.versioned("FORM/js/script.js")"></script>
+        </div>
+    </body>
+</html>

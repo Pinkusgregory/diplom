@@ -1,0 +1,46 @@
+@import views.html.helper.form
+@(formRegistration: Form[_])(implicit request: RequestHeader)
+
+@formApplication("Регистрация"){
+    <div class="form">
+@*
+        @form(action = routes.AuthController.signUpSubmit()){
+*@
+        <form method="post" action="@routes.AuthController.signUpSubmit()" id="form" class="form__body">
+            <h1 class="form__title">Регистрация</h1>
+            <div class="form__item">
+                <label for="firstName" class="form__label">Имя*:</label>
+                <input id="firstName" type="text" name="firstName" class="form__input _req">
+            </div>
+            <div class="form__item">
+                <label for="lastName" class="form__label">Фамилия*:</label>
+                <input id="lastName" type="text" name="lastName" class="form__input _req">
+            </div>
+            <div class="form__item">
+                <label for="email" class="form__label">E-mail*:</label>
+                <input id="email" type="text" name="email" class="form__input _req _email">
+            </div>
+            <div class="form__item">
+                <label for="password" class="form__label">Пароль*:</label>
+                <input id="password" type="password" name="password" class="form__input _req">
+            </div>
+            <div class="form__item">
+                <div class="form__label">Проект</div>
+                <select name="company" class="form__select">
+                    <option value="company1" selected>СевСУ</option>
+                    <option value="company2">КФУ</option>
+                    <option value="company3">МГУ</option>
+                </select>
+            </div>
+            <div class="form__item">
+                <div class="checkbox">
+                    <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req">
+                    <label for="formAgreement" class="checkbox__label"><span>Я даю свое согласие на обработку
+                        персональных данных в соответствии с <a href="">Условиями</a>*</span></label>
+                </div>
+            </div>
+            <button type="submit" class="form__button">Зарегистрироваться</button>
+            <a href="@routes.MainController.index()" class="form__button">Назад</a>
+        </form>
+    </div>
+}
